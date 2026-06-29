@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그</title>
+</head>
+<body>
+    <form action="#">
+        <!-- input 태그에 id 지정하고 label 태그 속성인 for에 연결하면 아이디 문구를 클릭했을 때 포커스(focus) 상태가 됨 -->
+        <div>
+            <label for="userid">아이디</label>
+            <input type="text" id="userid" placeholder="아이디를 입력해주세요">
+        </div>
+        <!-- label 태그를 반드시 사용해야 함 (안보이게 하고 싶으면 css에서 지정해야함-웹표준에 맞음) -->
+        <div>
+            <label for="userpw">비밀번호</label>
+            <input type="password" id="userpw" placeholder="비밀번호를 입력해주세요">
+        </div>
+        <div>
+            <input type="submit" value="로그인">
+        </div>
+
+        <div>
+            <!-- enctype="multipart/form-data" : 이미지 파일 넘길 때 사용 -->
+            <form action="#" enctype="multipart/form-data">
+                <!-- fieldset 태그 : 폼태그 안에서 영역을 나눌 때 사용 -->
+                <fieldset>
+                    <!-- 폼 태그 안에서 제목 정보-->
+                    <legend>계정 정보</legend>
+                        <div>
+                            <label for="user-id">아이디</label>
+                            <!-- 작성 말고 수정할 때 value 값을 미리 지정해주면 쉽게 수정하고 저장할 수 있음 -->
+                            <!-- <input type="text" id="user-id" placeholder="아이디를 입력해주세요" value="0hyeona"> -->
+                            <!-- 수정이 불가능한 상태로 만들고 싶을 땐 disabled 속성을 사용 (속성명과 속성값이 같기 때문)-->
+                            <!-- <input type="text" id="user-id" placeholder="아이디를 입력해주세요" value="0hyeona" disabled> -->
+                            <input type="text" id="user-id" placeholder="아이디를 입력해주세요" value="hyeona" disabled>
+                        </div>
+                        <div>
+                            <label for="user-pw">비밀번호</label>
+                            <input type="password" id="user-pw" placeholder="비밀번호를 입력해주세요">
+                        </div>
+                        <div>
+                            <label for="user-pw2">비밀번호 확인</label>
+                            <input type="password" id="user-pw2" placeholder="비밀번호를 다시 입력해주세요">
+                        </div>
+                        <p>비빌번호는 영대소문자와 특수문자를 포함시켜주세요</p>
+                </fieldset>
+                <fieldset>
+                    <legend>개인정보</legend>
+                    <div>
+                        <label for="user-name">이름</label>
+                        <!-- name 속성 : 데이터가 넘어갈 때 name이라는 이름으로 불러옴 -->
+                        <input type="text" id="user-name" name="user-name" value="김현아">
+                    </div>
+                    <div>
+                        <label for="userGender">성별</label>
+                        <!-- checked (선택되서 수정될 수 없을 때 사용, 속성명과 속성값도 같기 때문에 한 번만 사용함)-->
+                        <input type="radio" id="user-man" name="userGender">
+                        <label for="user-man">남자</label>
+                        
+                        <input type="radio" id="user-girl" name="userGender" checked>
+                        <label for="user-girl">여자</label>
+
+                        <input type="radio" id="user-none" name="userGender">
+                        <label for="user-none">선택안함</label>
+                    </div>
+                    <div>
+                        <label for="user-birth">생년월일</label>
+                        <input type="date" id="user-birth" name="user-birth">
+                    </div>
+                    <div>
+                        <label for="news-agency">전화번호</label>
+                        <!-- select 태그 -->
+                        <select name="news-agency" id="news-agency">
+                            <option value="선택안함">선택안함</option>
+                            <option value="skt" selected>SKT</option>
+                            <option value="kt">KT</option>
+                            <option value="lg">LG U+</option>
+                            <option value="알뜰폰">알뜰폰</option>
+                        </select>
+
+                        <!-- number 타입 : 숫자만 입력이 됨 (모바일에서 숫자 패드가 올라옴)-->
+                        <input type="number" id="phone-number" name="phone-number" value="01012345678">
+                        
+                        <!-- 외부 인증 요청 과정 페이지로 이동-->
+                        <!-- 버튼 (a 태그)-->
+                        <a href="#">인증 요청</a>
+                    </div>
+                    <div>
+                        <label for="confrim-id">인증번호</label>
+                        <input type="number" id="confrim-id" class="confrim-id">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>기타 정보</legend>
+                    <div>
+                        <!-- 데이터베이스에 전송할 때 파일, 파일경로, 파일명.확장자까지 넘어감-->
+                        <label for="user-photo">프로필 사진</label>
+                        <input type="file" id="user-photo" name="user-photo">
+                    </div>
+                     <div>
+                        <!-- 데이터베이스에 전송할 때 textarea에 기본 문구가 있다면 기본값 (기본 문구)가 저장 / placeholder로 지정-->
+                        <label for="user-profile-text">자기소개글</label>
+                        <textarea name="user-profile-text" id="user-profile-text" placeholder="나를 소개하는 글을 작성해보세요"></textarea>
+                     </div>
+                </fieldset>
+                <fieldset>
+                    <legend>개인정보처리방침</legend>
+                    <p>개인정보처리방침 전문</p>
+                    <div>
+                        <input type="checkbox" id="user-agree" name="user-agree">
+                        <label for="user-agree">개인정보 처리방침에 동의합니다.</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>제출</legend>
+                    <button type="submit">회원가입</button>
+                    <button type="reset">취소</button>
+                </fieldset>
+            </form>
+        </div>
+    </form>
+</body>
+</html>
