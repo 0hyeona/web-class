@@ -1,0 +1,85 @@
+html { 
+    font-size:20px;
+}
+.point-type { 
+    font-family: 'Aboreto', sans-serif;
+}
+
+main { 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.banner { 
+    background: url(./../img/image.png) no-repeat 50% 50% / cover;
+    height: 599px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .heading1 { 
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color : white;
+    text-align: center;
+}
+
+.wrap { 
+    margin: 0 auto;
+    width: 1600px;
+    /* border: 1px solid red; */
+}
+
+.con1 { 
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+}
+.con1 .heading2 { 
+    line-height: 90%;
+    font-size: 4rem;
+    padding-bottom: 80px;
+    text-transform: uppercase;
+}
+
+.con1 .para { 
+    padding: 20px;
+    border-top: 1px solid black;
+    margin-bottom: 3rem;
+
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.figure { 
+    display:flex;
+    flex-direction: column;
+}
+.inner-figure img { 
+    width: 1000px;
+    height: 430px;
+    object-fit: cover;
+    aspect-ratio: 1/1;    
+}
+
+.inner-figure figcaption {
+    margin-top: 20px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    text-transform: lowercase;
+
+}
+.inner-figure figcaption span { 
+    font-family: 'Pretendard';
+    font-weight: 800;
+    line-height: 140%;
+    text-transform: lowercase;
+}

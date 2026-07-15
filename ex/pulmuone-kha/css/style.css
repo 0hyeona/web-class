@@ -1,0 +1,104 @@
+/* 기본 스타일 초기화 : 의도하지 않았는데 적용되는 스타일 제거 */
+* {
+    margin:0; 
+    padding:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* 글자 css 속성은 상속되기 때문에 밑에 방법 비추 */
+    /* font-weight:400; */
+    /* 글자 css 속성은 부모 태그에 설정된만큼 설정 */
+    font-weight:inherit;
+    font-weight: inherit;
+}
+address {
+    font-style:inherit;    
+}
+
+ul, ol {
+    list-style: inherit;
+}
+
+a {
+    color : inherit;
+    text-decoration: inherit;
+}
+
+/* 공통 스타일 작업 : 공통적으로 적용되는 스타일 설정 */
+html { 
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    font-size:20px; /* rem 단위 : 1rem (반응형 디자인에서 핵심)*/
+    letter-spacing: 1.6;
+}
+.font {
+    font-family: 'Pulmuone';
+    text-align: center;
+}
+
+main {
+    width: 1200px;
+    margin : 0 auto;
+}
+
+
+.banner {
+    /* width:auto; */
+    height:250px;
+    background : url('../img/sub_vis01_02.jpg') no-repeat 50% 50% / cover;
+    margin-bottom:50px;
+}
+
+main h1 {
+    margin-bottom:100px;
+    font-size:30px;
+    font-weight:500;
+    background : url('../img/sub_tit_line.gif') repeat-x 0 50%;
+}
+
+main h1 span { 
+    background-color: white;
+    padding-right: 10px;
+}
+
+main h2 {
+    font-size:52px;
+    line-height: 140%;
+    padding: 0px 30px;
+    margin: 70px 0 ;
+    word-break: keep-all;
+    white-space: pre-wrap;
+} 
+
+main h2 em { 
+    font-style: normal;
+    color : #7eae4b;
+}
+
+.brand { 
+    width : 810px;
+    margin: 0px auto;
+    padding: 40px 90px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    /* border:1px solid red; */
+}
+
+main .brand h3 {
+    margin-bottom:25px;
+    font-size:35px;
+    word-break: keep-all; 
+    white-space: pre-wrap;
+}
+
+.brand p { 
+    line-height: 140%;
+}
+.text1 { 
+    margin-bottom: 30px;    
+    word-break: keep-all;
+    white-space: pre-wrap;
+}
+.text2 { 
+    word-break: keep-all;
+    white-space: pre-wrap;
+}
