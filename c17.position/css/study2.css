@@ -1,0 +1,34 @@
+.box { 
+    text-align: center;
+}
+.box p {
+    padding: 200px 30%;
+}
+.box h2 { 
+    font-size: 10vw;
+    position: sticky;
+    left:0;
+    top:0;
+    /* border:1px solid red; */
+}
+.image-box {
+    background-color: ivory;
+    padding: 160px 20px;
+    display:flex;
+    gap:40px;
+    /* align-items : 스트래치일 때 안 보이니까, 스티키를 쓸 땐 flex-start를 써야 보임 */
+    align-items: flex-start;
+}
+
+.image-box .sticky-image {
+    width: 300px;
+    position:sticky;
+    left:0;
+    top:0;
+}
+.sticky-image {
+    width: 100%;
+}
+.image-box p {
+    padding: 200px 30%;
+}
