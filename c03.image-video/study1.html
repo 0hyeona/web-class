@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그</title>
+    <style>
+        img {
+        width: 70%;
+        max-width: 400px;
+        height: auto;
+        }
+    </style>
+</head>
+
+</head>
+<body>
+    <h1>이미지 태그</h1>
+    <!-- src와 alt 둘 다 사용해야 함-->
+    <img src="./img/jeju.jpg" alt="Jeju 이미지">
+    <img src="./img/jeju1.jpg" alt="Jeju 이미지">
+    <p>이미지 태그는 문맥적인 뜻이 없기 때문에 글자와 같은 콘텐츠임</p>
+    <p style="font-size:100px;">
+        <img style="width:100px; height:80px" : src ="./img/jeju.jpg" alt="Jeju 이미지"> 가 가고 싶다...
+    </p>
+
+    <h2>반응형 이미지 설정</h2>
+    <picture>
+        <!-- 화면 너비가 768 픽셀보다 작은 경우 rainbow-640/1024/1600.jpg를 사용-->
+        <source media="(max-width:768px)" srcset="./img/rainbow-640.jpg">
+        <source media="(max-width:1200px)" srcset="./img/rainbow-1024.jpg">
+        <source media="(min-width:1201px)" srcset="./img/rainbow-1600.jpg">
+        <img src="./img/rainbow-640.jpg" alt="무지개 이미지">
+    </picture>
+</body>
+</html>
