@@ -1,0 +1,42 @@
+/* 자식 선택자 */
+main>h2 {
+    color:red; /* main 태그에서 자식 선택자인 h2 태그만 선택 */
+} 
+
+/* 자손 선택자 */
+main h3 { /* main 태그 안에 있는 h3 태그 선택 */
+    color : blue;
+}
+
+/* 리스트 6개 전부 선택 */
+.list>li {
+    color : gold;
+}
+
+/* list 태그 중 li 태그 중에서 3번째 li 태그를 선택 (순서 선택자)*/
+.list>li:nth-of-type(3) {
+    color : salmon;
+}
+
+/* 수식 표현도 가능 */
+.list>li:nth-of-type(3n+1) {
+    color : greenyellow;
+}
+
+/* (형제 선택자) */
+.list~p:nth-of-type(2)+p~p{
+    border : 1px solid;
+    padding : 20px;
+    color : purple;
+}
+
+/* a 태그에서 새 탭에 열리는 태그들만 스타일을 설정 (속성 선택자) */
+a[target="_blank"] {
+    color : green;
+}
+
+/* 스타일을 한 번에 지정 (그룹 선택자) */
+h1, h2, h3 {
+    color : brown;
+    font-style:italic;
+}

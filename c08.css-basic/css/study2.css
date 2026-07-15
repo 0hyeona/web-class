@@ -1,0 +1,18 @@
+h1 {
+    color:green;
+}
+li {
+    color:red;
+}
+li.a { /* li 태그를 가지고 있는 a클래스 */
+    color:blue;
+}
+#b {
+    color:yellow;
+}
+li.a.b {
+    color:brown;
+}
+li#b.c {
+    color : purple;
+}

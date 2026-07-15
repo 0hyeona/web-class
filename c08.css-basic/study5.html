@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일의 상속</title>
+    <style>
+        div#a {
+            color : red; /* 부모가 자식에게 주는 스타일 (상속 스타일) - 우선순위가 높더라도 자식 스타일에서 직접 스타일을 설정했기 때문에 반영되지 않음*/
+        }
+        p {
+        color : blue; /* 직접 준 스타일이기 때문에 직접 스타일임 */
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ullam minus officiis aperiam ab totam nobis doloribus error aliquid natus quisquam facere beatae nisi, voluptas vel sit porro pariatur eos?
+        </p>
+    </div>
+</body>
+</html>

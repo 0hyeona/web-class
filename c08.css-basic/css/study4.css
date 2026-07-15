@@ -1,0 +1,32 @@
+/* 태그명은 맨 앞에 와야함 */
+h2#a.a {
+    color : black;
+}
+h2#a {
+    color:pink; 
+}
+h2.a {
+    color : wheat;
+}
+h2.a.b {
+    color : blue;
+}
+#a {
+    color : purple;
+}
+.a {
+    color : orange;
+}
+.a {
+    color : green;
+}
+h2  {
+    color : red;
+}
+h2 {
+    color : rgb(199, 199, 247);
+    background-color: azure;
+}
+h2{
+    color : brown !important;
+}
