@@ -1,0 +1,86 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+.a { 
+    border: 10px solid black;
+    width: 200px;
+
+    /* 오버플로우 발생 X */
+    height: auto;
+
+    /* 오버플로우 발생*/
+    height: 200px;
+
+    /* 오버플로우 속성 : hidden (밖으로 나간 애가 안 보임) */
+    overflow: hidden;
+
+    /* 오버플로우 속성 : scroll (세로 방향으로만 스크롤바가 생성) */
+    overflow-y: scroll;
+    
+    /* 오버플로우 속성 : auto (내용이 많아지면 스크롤바가 자동 생성) */
+    /* overflow-y: auto; */
+
+    /* 오버플로우 속성 : auto (활성화는 안되지만 표현이 됨) */
+    /* overflow: auto; */
+
+    /* 오버플로우 속성 : 기본값 [visible] */
+    /* overflow: auto; */
+}
+
+.b {
+    border: 10px solid red;
+    width: 200px;
+    white-space: nowrap;  /* 줄바꿈 X */
+
+    /* 오버플로우 속성 : scroll (가로 방향으로만 스크롤바가 생성) */
+    overflow-x: scroll;
+}
+
+.c { 
+    border: 10px solid black;
+    width: 200px;
+    height: 30px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    /* 말줄임표시1 : 한 줄 */
+    text-overflow: ellipsis;
+}
+
+.d {
+    border: 10px solid black;
+    width: 200px;
+
+    /* 말줄임표시2 : 여러 줄일 때 사용 (비표준) */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow:hidden;
+    /*  */
+    text-overflow:ellipsis;
+}
+
+/* 스크롤바 스타일 변경 */
+::-webkit-scrollbar {
+    width:20px; /* 세로형 스크롤 바일 때 가로 사이즈 */
+    height:20px; /* 가로형 스크롤 바일 때 세로 사이즈 */
+}
+
+/* 전체 스타일 설정 (브라우저 스크롤바도 포함) */
+::-webkit-scrollbar-thumb {
+    background: blue; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track { /* track : 스크롤바가 지나다니는 길 */
+    background: black;
+}
+
+/* b 클래스에게만 스타일을 주고 싶다면 */
+.b::-webkit-scrollbar-track { /* track : 스크롤바가 지나다니는 길 */
+    background: green;
+}
+
