@@ -1,0 +1,18 @@
+h1 {
+    background-color: aqua;
+    width : 400px;
+    height : 400px;
+    display: inline-block;
+}
+strong {
+    background-color: aquamarine;
+    /* inline 스타일은 width, height 스타일 적용되지 않음 */
+    width : 400px;
+    height : 400px;
+    display: inline-block;
+}
+button {
+    /* button 태그는 inline 속성을 가지면서 width, height 속성을 가지고 있는 inline-block 속성 (베이스라인을 기준으로 정렬됨) */
+    width : 200px;
+    height : 45px;
+}
