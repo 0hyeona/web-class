@@ -1,0 +1,76 @@
+* {
+    /* 0px일 경우 margin:0, padding:0으로 작성 가능 */
+    margin:0px;
+    padding:0px;
+}
+.a {
+    border:1px solid #000;
+    height:1500px;
+    background-color: aqua;
+    background-image:url('./../img/mood.jpg');
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x;
+    background-repeat: repeat-y; */
+
+    /* 계산식 사용할 땐 calc로 설정해 계산 가능, 반드시 - 기호 사용할 때 좌우 공백이 필요함 */
+    background-position: calc(100% - 100px) 200px;
+
+    /* background-size: 500px 500px; */
+    /* 비율에 맞게끔 조정하려면 auto로 사용 */
+    background-size: auto 50%;
+}
+
+.b {
+    border:1px solid #000;
+    height:1500px;
+    background: aqua url('./../img/mood.jpg') no-repeat calc(100% - 100px) 200px / auto 50%;
+}
+
+.c {
+    border:1px solid red;
+    height:1000px;
+
+    /* 사이즈 방식을 cover로 설정 : 가득 채우는 방식 */
+    background: purple url(./../img/mood.jpg) no-repeat 50% 50% / cover;
+
+     /* 사이즈 방식을 contain 설정 : 이미지가 채워지는 방식 */
+    background: purple url(./../img/mood.jpg) no-repeat 50% 50% / contain;
+    
+    /* 블랜드 모드 (혼합모드) */
+    background-blend-mode: multiply;
+}
+
+.d {
+    border:1px solid red;
+    height:1000px;
+    background : 
+    /* url(./../img/mood.jpg) no-repeat 0 0 / 400px auto, 
+    url(./../img/mood2.jpg) no-repeat 100% 0 / 400px auto, 
+    url(./../img/mood3.jpg) no-repeat 50% 50% / 400px auto; */
+
+    
+    /* url(./../img/mood.jpg) no-repeat 50% 50% / 400px auto, 
+    url(./../img/mood2.jpg) no-repeat 50% 50% / 400px auto, 
+    url(./../img/mood3.jpg) no-repeat 50% 50% / 400px auto; */
+
+    url(./../img/mood.jpg) no-repeat 50% 50% / 400px auto, 
+    url(./../img/mood2.jpg) no-repeat 50% 50% / 500px auto, 
+    url(./../img/mood3.jpg) no-repeat 50% 50% / 600px auto;
+}
+
+.e {
+    border:1px solid red;
+    height:1500px;
+    background: 
+    url('./../img/mood.jpg') no-repeat 50% 50% / 500px auto, 
+    linear-gradient(30deg, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 50%, rgb(0, 0, 255) 100%)
+}
+
+.e .box {
+    width : 400px;
+    height : 800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin : 0 auto;
+    margin-top:100px;
+    -webkit-backdrop-filter: blur(5px);
+}
