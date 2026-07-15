@@ -1,0 +1,89 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.box {
+    background-color: yellowgreen;
+    width:1200px;
+    height:400px;
+    margin: 0 auto;
+
+    /* display 기본 속성 : block 블록 속성 */
+    display: flex; /* Flex Container */
+
+    
+    /* 아이템의 줄바꿈을 불가 : 스스로 크기를 줄임 */
+    flex-wrap:nowrap;
+    
+    /* 아이템의 줄바꿈을 허용 */
+    flex-wrap:wrap;
+
+    /* 메인축 방향 : 오른쪽 -> 왼쪽 [기본값] */
+    /* 왼쪽으로 오른쪽 */
+    /* flex-direction: row; */
+    
+    /* 오른쪽에서 왼쪽 */
+    /* flex-direction: row-reverse; */
+
+    /* 메인축 방향 : 위 -> 아래 */
+    /* flex-direction: column; */
+    
+    /* 메인축 방향 : 아래 -> 위 */
+    /* flex-direction: column-reverse; */
+
+    /* 메인축을 따라서 flex-item이 정렬되는 시작점 [기본값] */
+    /* justify-content: flex-start; */
+
+    /* 가운데 지점 */
+    /* justify-content: center; */
+
+    /* 끝 지점 */
+    /* justify-content: flex-end; */
+    
+    /* 간격 auto */
+    /* justify-content: space-between; */
+
+    /* 교차축 정렬 : 교차축의 길이만큼 stretch [기본값] */
+    /* align-items : stretch; */
+    /* align-items : flex-start; */
+    /* align-items : center; */
+    /* align-items : flex-end; */
+
+    /* gap: 10px; */
+}
+
+.box section { /* flex Item */
+    border:1px solid blue;
+    
+    /* 
+    현재 너비 : 1000px인데 400*3=1200px임 
+    flex로 설정했기 때문에 유연하게 대응이 가능
+    Flex Container : 한 줄로 출력 / flex-wrap:nowrap;
+    */
+    /* width: 400px; */
+
+    /* 아이템의 크기를 축소 [기본값 1] : 같은 비율로 줄어들기 */
+    /* flex-shrink:1; */
+}
+
+.a {
+    /* 메인 축으로 점유되는 아이템의 크기 (flex item에서 사용) */
+    flex-basis:200px;
+}
+.b {
+    flex-basis:auto;
+
+    /* 남은 공간을 먹고 1 비율만큼 커짐 */
+    flex-grow: 1;
+    /* shrink  유연하게 줄이기 */
+    /* flex-shrink: 2; */
+}
+.c {
+    flex-basis:auto;
+    flex-grow: 2;
+}
+
+.a, .b, .c {
+    flex:1;
+}
