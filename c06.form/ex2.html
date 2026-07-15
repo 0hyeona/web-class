@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 예제</title>
+</head>
+<body>
+    <form action="#">
+        <h1>로그인</h1>
+        <h2>Wavve 계정으로 로그인</h2>
+        <div>
+            <!-- html 상에서 label이 없어도 만들어서 css에서 없애줘야 함-->
+            <label for="user-id">아이디</label>
+            <!-- 필수적으로 작성해야하는 속성 : required -->
+            <!-- 읽기만 가능한 속성 : readonly -->
+            <input type="text" id="user-id" placeholder="이메일 주소 또는 아이디" required value="abce" readonly>
+        </div>
+        <div>
+            <label for="user-pw">비밀번호</label>
+            <input type="password" id="user-pw" placeholder="비밀번호" required>
+        </div>
+        <div>
+            <input type="checkbox" id="id-store" name="id-store">
+            <label for="id-store">아이디 저장</label>
+            <input type="checkbox" id="auto-login" name="auto-login">
+            <label for="auto-login">자동 로그인</label>
+        </div>
+        <div>
+            <button type="submit">로그인</button>
+        </div>
+        <ul>
+            <li>                
+                <a href="#">아이디 찾기</a>
+            </li>
+            <li>
+                <a href="#">비밀번호 재설정</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+        </ul>
+    </form>
+    <div>
+        <h3>또 다른 서비스 계정으로 로그인</h3>
+        <ul>
+            <li>
+                <a href="#" target="blank">
+                <img src="./img/img/ico-common-kakao.png" alt="Kakao">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="blank">
+                <img src="./img/img/ico-common-naver.png" alt="Naver">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="blank">
+                <img src="./img/img/ico-common-facebook.png" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="blank">
+                <img src="./img/img/ico-common-tworld.png" alt="T-World">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="blank">
+                <img src="./img/img/ico-common-apple.png" alt="Apple">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>* SNS계정으로 간편하게 가입하여 서비스를 이용하실 수 있습니다. <br>
+            기존 POOQ 또는 Wavve 계정과는 연동되지 않으니 이용에 참고하세요.
+        </p>
+    </div>
+</body>
+</html>

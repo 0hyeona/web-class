@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 예제</title>
+</head>
+<body>
+    <form action="#">
+        <h1>CREATE YOUR ACCOUT</h1>
+        
+        <div>
+            <label for="user-email">Emaill Address</label>
+            <input type="text" id="user-email" name="user-email">
+        </div>
+        <div>
+            <label for="confirm-email">Confirm your Address</label>
+            <input type="text" id="confirm-email" name="confirm-email">
+        </div>
+        <div>
+            <label for="user-country">Country of Residence</label>
+            <select name="user-country" id="user-country">
+                <option value="Aland islands">Aland islands</option>
+                <option value="Bahanmas">Bahanmas</option>
+                <option value="China">China</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Egypt">Egypt</option>
+                <option value="France">France</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Korea, Republic of" selected>Korea, Republic of</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="subtext">
+            <label for="subtext">I am 13 years of age or older and agree to the terms of the <em>Steam Subscriber Agrement</em> and the <em>Valve Privacy Policy.</em>
+            </label>
+        </div>
+        <div>
+            <button type="submit">Continue</button>
+        </div>
+    </form>
+</body>
+</html>
