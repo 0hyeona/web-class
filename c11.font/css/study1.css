@@ -1,0 +1,90 @@
+html {
+    /* rem : html에 적용된 글씨 크기 */
+    /* font-size:20px; */
+    font-size:16px;
+    font-family : '페이퍼로지', 'Aggravo', 'Inner', sans-serif;
+    font-weight: 400;    
+}
+.a {
+    /* 브라우저의 기본 글씨 크기 : 16px (1rem) */
+    font-size:20px;
+    
+    /* font-size이 20이기 때문에 2*20=40px */
+    /* 반응형 웹사이트를 만들 때는 상대단위인 rem 단위를 씀 */
+    font-size:2rem; 
+}
+
+.b {
+    /* 상속 스타일 : 원래 p태그는 16px / b클래스에 폰트 사이즈를 30으로 준다면 p태그 폰트 사이즈는 30이 될 것 */
+    font-size:16px;
+}
+
+.b p {
+    /* em : 부모 태그에게 적용된 글씨 크기  */
+    font-size:1em; 
+
+    /* 폰트 굵기 */
+    font-weight:400;
+    
+    /* 행간 : 글씨 크기에 비례함 (1em=16px * 140) */
+    line-height: 140%;
+
+    font-style:italic;
+}
+
+address {
+    font-style:normal;
+}
+
+.c {
+    letter-spacing: -2px;
+    word-spacing: 20px;
+
+    /* nowrap : 한 줄 출력 */
+    /* white-space: nowrap; */
+    /* pre :  줄바꿈 X (공백문자, 줄바꿈 반영)*/
+    /* pre-wrap :  줄바꿈 O*/
+    white-space: pre-wrap;
+}
+
+.e {
+    /* 첫 줄 들여쓰기 */
+    text-indent : 50px;
+    
+    /* 영문자 속성 */
+    text-transform : uppercase; /* 대문자 */
+    text-transform : lowercase; /* 소문자 */
+    text-transform : capitalize; /* 단어 앞에만 대문자 */
+
+    /* 단어 쪼개기 : 단어를 쪼개지지 않는 선에서 줄바꿈이 됨 */
+    word-break: break-all; /* 단어가 쪼개져버림 */
+    word-break: keep-all; /* 단어를 쪼개지지 않고 줄바꿈 하겠다 */
+}
+
+.g {
+    /* 텍스트 정렬  */
+    text-align:left;
+    text-align:right;
+    text-align:center;
+
+    /* 텍스트 양쪽 끝을 기준으로 정렬 */
+    text-align:justify;
+
+    /* 밑줄 스타일 */
+    text-decoration: underline; /* 밑줄 */
+    text-decoration: line-through; /* 취소선 */
+}
+
+.i {
+    font-family: Aggravo;
+}
+
+.j {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+.k {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
