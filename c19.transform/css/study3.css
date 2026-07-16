@@ -1,0 +1,25 @@
+.box { 
+    background-color: pink;
+    height: 800px;
+    position: relative;
+}
+
+.a {
+    width:200px;
+    height:200px;
+    background-color: red;
+    position:absolute;
+    /* left: 50%;은 중간이 아님 */
+    /* 1. calc() 괄호 사이에 마이너스를 공백 시켜줘야 함 */
+    /* left: calc(50% - 100px); */
+    /* top: calc(50% - 100px); */
+
+    left: 50%;
+    top: 50%;
+
+    /* 2. transform: translate() 속성 이용; */
+    /* 절댓값 */
+    /* transform: translate(-100px, -100px); */
+    /* 상대값 : 너비/높이 값이 주어지지 않아도 중간에 배치하기 쉬움 */
+    transform: translate(-50%, -50%);
+}
