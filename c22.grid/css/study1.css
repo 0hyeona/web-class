@@ -1,0 +1,67 @@
+/* 그리드 컨테이너 */
+.box {
+    border:1px solid red;
+    width:800px;
+    height: 1000px;
+    margin:0 auto;
+
+    display:grid;
+    /* 열의 크기와 개수를 설정 : 각각의 열 너비가 100px */
+    /* grid-template-columns: 100px 100px 100px; */
+    /* grid-template-columns: 20% 20% 20%; */
+
+    /* 크기가 같다면 repeat 속성을 사용해 repeat(개수, 크기) 설정해주면 됨 */
+    /* grid-template-columns: repeat(6, 20%); */
+
+    /* fr : fraction (비율) */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    /* minmax(최소, 최대) */
+    /* grid-template-columns: 100px minmax(150px, 300px); */
+
+    /* 열의 개수를 3개를 사용, 열 너비는 최소 100px이면서, 최대값은 자동임
+    auto : 컨텐츠만큼 늘어나욤.. */
+    /* grid-template-columns: repeat(3, minmax(100px, auto)); */
+
+    /* 열이 5개 */
+    /* grid-template-columns: repeat(3, 100px) 1fr 1fr; */
+
+    /* 열 개수 5개, 최소 열 너비 : 200px, 최대 열 너비 : 비율로 1:1:1임 */
+    
+    /* 열 개수가 넘쳐날 때 넘치는 걸 밑의 행으로 보낼 수 있음 : 화면축소/확대시 자주 사용*/
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    
+    grid-template-columns: repeat(3, 200px);
+    
+    /* 열이 바뀔 때 행도 바뀌어야 함 */
+    /* grid-template-rows: 100px 150px 200px; */
+    grid-auto-rows: 100px;
+
+    /* 메인축정렬 */
+    justify-content: center;
+    justify-items: stretch;
+    
+    /* 교차축정렬 */
+    align-content: center;
+    align-items: stretch;
+
+    /* gap 간격은 무조건 부모 컨테이너에서 적용해야함 (상하좌우) */
+    gap:10px 30px;
+    align-self: center;
+}
+
+/* 그리드 아이템 */
+.box section { 
+    border:1px solid blue;
+}
+/* .box section:nth-of-type(1) {
+    특정값만정렬
+    justify-self: center;
+    align-self: center;
+} */
+.box section:nth-of-type(4) {
+    /* 가로 병합 */
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
