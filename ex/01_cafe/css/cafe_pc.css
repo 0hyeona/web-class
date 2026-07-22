@@ -28,7 +28,7 @@ main {
     font-weight: 400;
     line-height:140%;
     display:grid;
-    gap:10px;
+    gap:0.5rem;
 }
 
 .banner { 
@@ -48,15 +48,41 @@ main {
     font-size: 1.5rem;
     padding: 0 0 1rem 0 ;
     display:grid;
-    gap:10px;
+    gap:0.5rem;
 }
 
 .values ul {
     display:grid;
-    gap:10px;
+    gap:0.5rem;
 }
 
 .values ul li { 
     list-style: none;
     text-transform: uppercase;
+}
+
+@media (max-width:1440px) {
+    html {
+        font-size: 18px;
+    }
+    .inner-frame {
+    width: auto;
+    margin: 0 2rem;
+    }
+    .title p br{ 
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+    .inner-frame {
+    width: auto;
+    margin: 0 1rem;
+    }
+    .title p br{ 
+        display: none;
+    }
 }
