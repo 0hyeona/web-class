@@ -84,8 +84,14 @@ main {
     line-height: 140%;
     text-transform: lowercase;
 }
-
 @media (max-width:1600px) {
+    .wrap {
+        width: auto;
+        margin: 0 8rem;
+    }
+}
+
+@media (min-width:1024px) {
     html {
         font-size: 18px;
     }
@@ -94,17 +100,13 @@ main {
         background-size: cover;
         background-position: center;
     }
-    .wrap {
-        margin: 0 2rem;
-        width: auto;
-    }
     .inner-figure img {
         width: 100%;
         object-fit: cover;
         aspect-ratio: initial;
     }
 }
-@media (min-width:768px) {
+@media (max-width:768px) {
     html {
         font-size: 14px;
     }
