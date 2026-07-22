@@ -1,0 +1,108 @@
+html { 
+    font-size:20px;
+}
+body { 
+    background: url(./../image/bg.svg) no-repeat top center / contain;
+}
+.point-type { 
+    font-family: 'Pretendard', sans-serif;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 6rem 0;
+    /* border: 1px solid red; */
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;   
+    box-sizing: border-box;  
+    width: 1600px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.banner { 
+    width:100%;
+    background: url(./../image/coffee.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : white;
+    height: 599px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.heading1 {
+    font-family: 'Aboreto';
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.heading2 {
+    padding-top: 120px;
+    font-family: 'Aboreto';
+    font-weight: 400;
+    line-height: 90%;
+    font-size:7.5rem;
+    text-transform: uppercase;
+}
+.text {
+    padding:48px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+.figure1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;      
+}
+
+.coffee-gallery1 img { 
+    width: 100%;            
+    max-width: 520px;       
+    height: 520px;
+    object-fit: cover;      
+    border-radius: 1rem;    
+    aspect-ratio: 1 / 1;
+}
+
+.para {
+    font-weight:400;
+    text-align: center;
+    line-height: 140%;
+    padding: 2rem 0;
+}
+
+.para .a{
+    font-family: 'Aboreto';
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.para .b { 
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.figure2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.coffee-gallery2 img {
+    width:100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    aspect-ratio: 790 / 434;
+}
