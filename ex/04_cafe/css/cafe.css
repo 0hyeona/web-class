@@ -30,7 +30,7 @@ main {
     align-items: center;
     color : white;
     height: 599px;
-    border-radius: 50px;
+    border-radius: 2.5rem;
     position: relative;
 }
 
@@ -59,9 +59,7 @@ main {
 
 .figure1 {
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 1rem;      
+    gap: 1rem;
 }
 
 .coffee-gallery1 img { 
