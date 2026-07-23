@@ -118,8 +118,14 @@ main {
     margin-bottom: 218px;  
 }
 
+@media(min-width:2000px) {
 
-@media (max-width:1600px) {
+    .banner {
+        width:2000px;
+        margin: 0 auto;
+    }
+}
+@media(max-width:1600px) {
     .container {
         width: auto;
         margin: 0 2rem;
@@ -162,15 +168,6 @@ main {
         width:100%;
     }
     
-    .banner { 
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-    }
-    .container1 .para { 
-        width:100%;
-        text-align: center;
-    }
     .cafe-figure .inner-figure img {
         width: 100%;
         aspect-ratio: 467 / 434;
@@ -209,4 +206,8 @@ main {
     .container1 {
     background: url(./../img/Vector\ 1.svg) no-repeat 50% -70px;    
     }
+}
+
+@media (max-width:340px) {
+
 }
