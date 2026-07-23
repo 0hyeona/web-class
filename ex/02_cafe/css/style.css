@@ -90,7 +90,12 @@ main {
         margin: 0 8rem;
     }
 }
-
+@media (max-width:1600px) {
+    .wrap {
+        width:auto;
+        margin:0 2rem;
+    }
+}
 @media (min-width:1024px) {
     html {
         font-size: 18px;
