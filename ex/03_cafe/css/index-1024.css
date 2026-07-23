@@ -1,0 +1,17 @@
+@media (max-width:1024px) {
+    html { 
+        font-size:18px;
+    }
+    .container1 .heading2 {
+        font-size: 80px;
+    }
+    .container1 {
+        width:100%;
+    }
+    
+    .cafe-figure .inner-figure img {
+        width: 100%;
+        aspect-ratio: 467 / 434;
+        object-fit: cover;
+    }
+}
