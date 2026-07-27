@@ -1,0 +1,123 @@
+html { 
+    font-size:20px;
+}
+
+body { 
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+.abo { 
+    font-family: 'Aboreto';
+}
+
+.pre {
+    font-family: 'Pretendard';
+}
+
+.titlebox h1 {
+    padding-top:8rem;
+    padding-bottom:1rem;
+}
+
+.titlebox { 
+    margin: 0 auto;
+    padding : 0 8rem;
+    padding-bottom:5rem;
+}
+
+.container .titlebox .abo {
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+
+.container .titlebox p { 
+    font-size: 1rem;
+    line-height: 140%;
+}
+
+.container .banner {
+    background: url('../img/background.jpg') no-repeat 50% 50% / cover;
+    height: 700px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left:484px;
+}
+.heading2 { 
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2rem;
+}
+.heading2 p { 
+    color : white;
+    line-height: 90%;
+    text-transform: uppercase;
+    font-size:7.5rem;
+    text-align: left;
+}
+
+.signature-list {
+    padding-top: 5rem;
+}
+
+.signature-list .subtitle .para .abo{
+    font-size: 2rem;
+    line-height: 140%;
+    padding-bottom: 1rem;
+}
+
+.signature-list .subtitle .para .pre{
+    font-size: 1rem;
+    line-height: 140%;
+    padding-bottom: 3.5rem;
+}
+
+.signature-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.signature-list ul li { 
+    list-style: none;
+    width: 520px;
+    text-align: left;
+}
+
+.signature-list ul li figure {
+    aspect-ratio: 520 / 518.676;
+    margin: 0 0 1rem;
+    overflow: hidden;
+}
+
+.signature-list ul li figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.list .txt .bold { 
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 140%;
+    text-transform: capitalize;
+}
+
+.txt p:last-child {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
