@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+    color: #45411f;
+}
+
+.grade-card {
+    width: min(92%, 440px);
+    padding: 30px;
+    background-color: #ffffff;
+    border: 2px solid #fff1a6;
+    border-radius: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid #f5e7a0;
+    border-radius: 16px;
+}
+
+caption {
+    position: relative;
+    padding-bottom: 22px;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: #736000;
+}
+
+th,
+td {
+    padding: 14px 18px;
+    border-bottom: 1px dashed #f1df84;
+}
+
+th {
+    width: 42%;
+    background-color: #fffbe5;
+    color: #887100;
+    text-align: left;
+}
+
+td {
+    text-align: right;
+    font-weight: 600;
+    color: #514800;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+tbody tr:hover:not(.summary) {
+    background-color: #fffbed;
+}
+
+.summary th,
+.summary td {
+    background-color: #fff1a6;
+    color: #6d5900;
+    font-weight: 700;
+}
+
+.summary:last-child th,
+.summary:last-child td {
+    background-color: #fff1a6;
+}
