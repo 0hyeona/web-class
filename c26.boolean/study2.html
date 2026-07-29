@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자</title>
+</head>
+<body>
+    <script>
+        console.log(5>3?"가":"나"); // 가
+
+        console.log(5<3?"가":"나") // 나 
+        console.log(10!=10?"다":"라") //라 
+        console.log(20?"a":"b") // a
+        console.log(!0?"c":"d") // c
+        let d = "abc" 
+        console.log(d?"e":"f") // e
+        let e = 0
+        console.log(!e?"g":"h") // g
+        console.log(30<20?"A":5==5?"C":"D") // C
+
+        let score = 40
+        console.log(score>=90?"A":score>=80?"B":score>=70?"C":"D") // D
+
+
+        let name = prompt('이름을 입력해라!');
+        name = name?name:'김현아';
+        console.log(name);
+        document.write(`<h1>${name}님 환영합니다.</h1>`);
+    </script>
+</body>
+</html>
