@@ -14,7 +14,9 @@
         let scoreSoc = Number(prompt('사회 성적을 입력해주세요'));
         
         let scoreTotal = scoreKor + scoreMat + scoreEng + scoreSoc;
-        let scoreAvg = (scoreTotal/4).toFixed(2);
+        let scoreAvg = Number((scoreTotal/4).toFixed(2));
+        let grade = (scoreAvg>=90)?'1등급':(scoreAvg>=80)?'2등급':(scoreAvg>=70)?'3등급':(scoreAvg>=60)?'4등급':'5등급';
+        console.log(grade);
 
         document.write(`
             <main class="grade-card">
@@ -48,6 +50,10 @@
                         <tr class="summary">
                             <th scope="row">평균</th>
                             <td>${scoreAvg}점</td>
+                        </tr>
+                        <tr class="summary">
+                            <th scope="row">등급</th>
+                            <td>${grade}</td>
                         </tr>
                     </tbody>
                 </table>
