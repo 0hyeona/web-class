@@ -44,12 +44,10 @@ body {
     display:flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left:484px;
 }
 .heading2 { 
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
     padding: 2rem;
 }
@@ -77,7 +75,7 @@ body {
     padding-bottom: 3.5rem;
 }
 
-.signature-list ul {
+.signature-list .cardlist {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -120,4 +118,82 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media (max-width:1600px) { 
+    body {
+        width: auto;
+    }
+}
+@media (max-width:1440px) {
+    html { 
+        font-size:18px;
+    }
+    body {
+        font-size:18px;
+    }
+    .titlebox h1 {
+    padding-bottom:1rem;
+    }
+    .signature-list li {
+        width: 100%;
+    }
+    .signature-list .cardlist {
+        margin:0 2rem;
+    }
+    .heading2 p { 
+    font-size:80px;
+    text-align: left;
+    }
+    .signature-list ul {
+        gap: 1rem;
+    }
+    .signature-list ul li figure {
+    aspect-ratio: 305.33 / 304.55;
+    margin: 0 0 1rem;
+    overflow: hidden;
+    }
+    /* .list { 
+        margin:0; 
+        padding:0;
+    } */
+}
+
+@media (max-width:768px) {
+    html { 
+        font-size:14px;
+    }
+    .container .titlebox {
+        margin: 0 1rem;
+    }
+    .titlebox {
+        padding: 0;
+        padding-bottom: 5rem;
+}
+    .heading2 p { 
+        font-size:50px;
+        text-align: center;
+    }
+    .container .banner {
+        justify-content: center;
+        align-items: center;
+}
+    .signature-list .list {
+        width: 100%;
+        margin: 0;
+    }
+    .cardlist .txt { 
+        font-size: 14px;
+    }
+    .signature-list .cardlist {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        margin: 0 1rem;
+    }
+    .signature-list ul li figure {
+    aspect-ratio: 365 / 364.07;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    }
 }
