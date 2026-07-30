@@ -1,0 +1,85 @@
+* { /* * : 모든 태그라는 뜻 */
+margin:0px; 
+padding:0px;
+}
+
+.a-box {
+    /* border 속성 */
+    border-left:10px solid red;
+    /* div는 블록 레벨 태그이기 때문에 x 뒤에 border-right 설정하면 부모 너비의 오른쪽 부분에 테두리가 설정됨 */
+    border-right:1px dashed red;
+    border-top:1px solid blue;
+    border-bottom:1px dotted green;
+    border:1px solid #000;
+    
+    /* margin 속성 */
+    margin-left:50px;
+    margin-right:50px;
+    margin-top:50px;
+    margin-bottom:70px;
+    
+    /* padding */
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.b-box {
+    border:1px solid #000;
+    margin:50px;
+    padding:20px;
+}
+
+.c-box {
+    border:1px solid #000;
+    /* 2개일 때 : (상하) (좌우) */
+    margin:100px 50px;
+    padding:30px 10px;
+}
+
+.d-box {
+    border:1px solid;
+    /* 3개일 때 : top (left right) bottom */
+    margin:100px 50px 200px;
+
+    /* 4개일 때 : 시계방향 (top) (right) (bottom) (left) */
+    padding: 10px 20px 30px 40px;
+}
+
+/* content-box */
+.e-box {
+    border:10px solid;
+
+    /* content-box 계산할 때 padding, margin 영향을 안 받음 부모 박스의 가로 공간을 100% 꽉 채움 */
+    /* width:auto;부모 박스의 가로 공간을 100% 꽉 채움 */
+    width:400px;
+    /* height:auto : 세로 크기는 박스 안에 글자나 이미지가 들어있는 만큼만 딱 늘어남 */
+    /* height:20px; */
+    padding:20px;
+
+    /* box-sizing:content-box; 은 기본 속성 
+    content-box 크기를 width로 영향을 받음
+    */
+    box-sizing: content-box;
+}
+
+.g-box {
+    border:10px solid red;
+    padding:20px;
+    width:400px;
+    /* 전체 사이즈 : 400+20+20+10+10=460
+    content-box 사이즈 : 400 */
+
+    /* box-sizing:border-box; 은 border까지 포함된 width이다. 즉, content-box가 줄어듬
+    전체 사이즈 : 400px
+    content-box
+    400-10-10-20-20=340
+    */
+    box-sizing: border-box;
+}
+.h-box {
+    border:10px solid;
+    width:1000px;
+    margin:0px auto;
+}

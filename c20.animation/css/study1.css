@@ -1,0 +1,37 @@
+.a {
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    /* 축약형 */
+    animation: myrotate 2s linear 0s 2;
+
+    /* 개별속성 */
+    /* animation-name: myrotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: normal; */
+
+}
+.b { 
+    width: 100px;
+    height: 100px;
+    background-color: rgb(179, 115, 32);
+    animation: myrotate 2s linear 0s 2;
+}
+
+.c { 
+    width: 100px;
+    height: 100px;
+    background-color: rgb(250, 208, 153);
+    animation: myrotate 2s linear 0s 2;
+
+}
+/* 평면회전 애니메이션 */
+@keyframes myrotate {
+    0% {transform : rotate(0deg);}
+    100%{transform : rotate(360deg);}
+}

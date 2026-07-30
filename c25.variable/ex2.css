@@ -1,0 +1,168 @@
+:root {
+    --bg-color: #f4f7ff;
+    --card-color: #ffffff;
+    --accent-color: #4f46e5;
+    --accent-soft: #eef2ff;
+    --text-color: #1f2937;
+    --sub-text-color: #6b7280;
+    --border-color: #e5e7eb;
+    --good-color: #10b981;
+    --warning-color: #f59e0b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    color: var(--text-color);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min(700px, 100%);
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-color);
+    padding: 32px;
+    box-shadow: 0 20px 45px rgba(79, 70, 229, 0.15);
+}
+
+h1,
+h2 {
+    margin: 0 0 16px;
+    color: var(--accent-color);
+}
+
+p,
+li {
+    margin: 0 0 12px;
+    line-height: 1.7;
+    color: var(--sub-text-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    width: 140px;
+    background: var(--accent-soft);
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+td {
+    font-weight: 600;
+}
+
+tr:last-child th,
+tr:last-child td {
+    border-bottom: none;
+}
+
+.status-wrap {
+    margin-top: 24px;
+}
+
+.status-bar {
+    display: flex;
+    margin: 12px 0;
+}
+
+.status-step {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    background: #e5e7eb;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.status-step.active {
+    background: var(--good-color);
+    color: white;
+}
+
+.status-text {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .status-bar {
+        flex-direction: column;
+    }
+
+    th {
+        width: 100px;
+        font-size: 0.95rem;
+    }
+}
+
+.status-bar {
+    display: flex;
+    overflow: hidden;
+}
+
+.status-step {
+    flex: 1;
+    padding: 12px 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-step span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.under {
+    background-color: #4a90e2; /* 파란색: 저체중 */
+}
+
+.normal {
+    background-color: #55b95a; /* 초록색: 정상 */
+}
+
+.over {
+    background-color: #f28bb0; /* 핑크색: 과체중 */
+}
+
+.obese {
+    background-color: #e53935; /* 빨간색: 비만 */
+}
+
+/* 현재 상태를 더 눈에 띄게 */
+.status-step.active {
+    outline: 3px solid #222;
+    outline-offset: -3px;
+}

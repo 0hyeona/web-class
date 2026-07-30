@@ -1,0 +1,37 @@
+/* 모든 화면에 스타일이 적용됨 */
+.wrap {
+    background-color: beige;
+    transition: all 1s ease 0s;
+}
+
+@media (min-width:2000px) {
+    /* 화면너비가 2000픽셀이 이상인 경우 */
+}
+
+@media (min-width:800px) and (max-width:1500px) {
+    body {
+        background-color:aquamarine;
+    }
+}
+
+/* 1024, 768, 480픽셀들은 브레이크포인트라고 함 */
+@media (max-width:1024px) { /* 탭, 패드*/
+    /* 화면너비가 최대 1024 픽셀인 경우에 적용되는 스타일 
+    =화면 너비가 1024픽셀 이하인 경우 */
+    .wrap {
+        background-color: pink;
+    }
+}
+
+@media (max-width:768px) { /* 모바일 */
+    /* 화면 너비가 768픽셀 이하인 경우 */
+    .wrap {
+        background-color: cadetblue;
+    }
+}
+
+@media (max-width:480px) { 
+    .wrap {
+        background-color:chocolate;
+    }
+}

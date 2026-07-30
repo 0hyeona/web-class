@@ -1,0 +1,38 @@
+* {
+    margin:0;
+    padding:0;
+}
+.box { 
+    border: 10px solid black;
+    width: 400px; 
+    height: 400px;
+    position:relative; 
+    right: 0px;
+    bottom:0px;
+}
+
+.box .a { 
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    right:0px;
+    bottom: 0px;
+    /* [기본값] z-index : 0 클수록 앞쪽에 배치 */
+    z-index: 999;
+}
+.box .b { 
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position : absolute;
+    right: 50px;
+    bottom : 50px;
+    z-index: 1;
+}
+.box .c { 
+    background-color: green;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}

@@ -1,0 +1,123 @@
+html { 
+    font-size:20px;
+}
+.point-type { 
+    font-family: 'Aboreto', sans-serif;
+}
+
+main { 
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background:url(./../img/BACKGROUND.png) no-repeat 50% 720px;
+}
+
+.banner { 
+    background: url(./../img/coffee.png) no-repeat 50% 50% / cover;
+    height: 599px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : white;
+    width: 100%; 
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    position: relative;
+}
+
+.banner .image img {
+    z-index: 0;
+    position: absolute;
+    top:50%;
+    left:50%;
+}
+
+.heading1 {
+    font-family: 'Aboreto';
+    font-size: 50px;
+    line-height: 100%;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:10rem;
+    background: url(./../img/Vector\ 1.svg) no-repeat 50% 0%;    
+}
+.container1 .heading2 {
+    font-family: 'Aboreto';
+    font-size: 7.5rem;
+    line-height: 90%;
+    margin-bottom:2rem;
+    position: relative;
+}
+.container1 .para { 
+    width: 1600px;
+    border-top-width: 1px;
+    font-family: 'Pretendard';
+    font-size: 1rem;
+    line-height: 140%;
+    gap:40px;
+}
+
+.font-style  {
+    font-family: 'Pretendard';
+    font-size: 1rem;
+    line-height: 140%;
+    color : #770000;
+}
+
+.container2 {
+    text-align: left;
+}
+.container2 .cafe-figure {
+    display:flex;
+    gap:1rem;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem; 
+}
+
+.cafe-figure .inner-figure img {
+    width: 790px;
+    height: 434px;    
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.inner-figure2 {
+    font-size: 2rem;
+}
+.para span { 
+    color: #770000;
+}
+.description {
+    font-family: 'Pretendard';
+    font-size: 1rem;
+    line-height: 140%;
+    text-transform: capitalize;
+}
+.para { 
+    margin-bottom:1rem;
+}
+.para1 {
+    margin-bottom:0.5rem;
+}
+.para2 {
+    margin-bottom: 218px;  
+}
+
+@media (max-width:340px) {
+
+}

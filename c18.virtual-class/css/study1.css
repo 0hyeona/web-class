@@ -1,0 +1,39 @@
+.a { 
+    width:100px;
+    height:100px;
+    background-color: red;
+    /* 전환  */
+    /* transition : all 10s ease 0s; */
+    transition : width 10s ease 0s;
+    /* all : 평상시에서 마우스를 올렸을 때 나타나는 속성 4개 모드를 2초동안 실행 */
+    /* linear : 정비례 그래프 */
+    /* ease (in/in-out) : 갈수록 속도가 빠름 */
+}
+
+/* 마우스를 올렸을 때 */
+.a:hover {
+    background-color: blue;
+    width:200px;
+    height:200px;
+    color:white;
+}
+
+/* 마우스를 클릭했을 때  */
+.a:active {
+    border:4px solid lime;
+}
+
+/* 무조건 앞에 선택한 태그의 첫 번째 자식 태그를 만듬 */
+.b:before {
+    content : '안녕하세요';
+    border: 1px solid red;
+    display: block;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 무조건 마지막 태그를 만듬 */
+.b:after {
+    content : '파이팅~';
+}
