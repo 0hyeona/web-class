@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수:function</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <h2>함수의 종류</h2>
+    <ul>
+        <li>alert()</li>
+        <li>prompt()</li>
+        <li>confirm()</li>
+        <li>Number()</li>
+        <li>String()</li>
+        <li>console.log()</li>
+    </ul>
+    <h2>사용자 정의함수</h2>    
+    <script>
+        function hello() {
+            document.write('<h3>안녕하십니까뿔이!!</h3>');
+        }
+        hello()
+
+        function welcome(name) {
+            document.write(`<h3>안녕하십니까 어서오세요 환영합니다 ${name}님!!!!!!!</h3>`);
+        }
+        welcome('김현아');
+        welcome('현아');
+
+        let person = [];
+
+        function intro(name, age, hobbies) {
+            let personInfo = { name: name, age: age, hobbies: hobbies };
+            person.push(personInfo);
+
+            document.write(`<h3>내 이름은 ${name}이고, 나이는 ${age}살, 내 취미는 ${hobbies}입니다.</h3>`);
+        }
+
+        intro('김현아', 23, '음악감상');
+        intro('현아', 24, '영화감상');
+
+        console.log(person);
+
+</script>
+</body>
+</html>
