@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        // {, , }
+        let person1 = {name:'김현아', gender:'여자', married:false};
+        // alert(person1.name);
+        // alert(person1.gender);
+        // alert(person1.married);
+        console.log(person1['name'][1]);
+        console.log(person1.name[2]);
+        console.log(person1['gender'][0]);
+        console.log(person1.gender[1]);
+        console.log(person1['married']);
+        console.log(person1.married);
+
+        let person2 = {name:'김혀나', gender:'여자', married:false};
+        console.log(person2.name)
+        person2.name='현아';
+        console.log(person2.name)
+
+        let newPerson={...person1, age:23, name:'김정아'};
+        console.log(newPerson);
+    </script>
+</body>
+</html>
