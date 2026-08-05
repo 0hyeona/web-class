@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>값으로서 사용되는 함수</title>
+</head>
+<body>
+    <script>
+        function a() {
+            alert('aaa');
+        }
+        // a();
+
+        let b = function () {
+            alert('bbb');
+        }
+        
+        let c = name => alert(`Hi ${name}!`);
+        c('hyeona')
+        
+        let add = (a, b) => {
+            let result=a+b;
+            alert(result);
+        }
+        add(3, 5);
+
+        let sum = (a, b) => a+b;
+        alert(sum(10, 10));
+        
+        let e = (name, age) => {
+            document.write(`<h3>${name}님 ${age}살이군요!</h3>`);
+        }
+        e('김현아', 23);
+
+    </script>
+</body>
+</html>

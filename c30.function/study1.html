@@ -43,6 +43,51 @@
 
         console.log(person);
 
+        function nameIntro(name) {
+            document.write(`<h3> ${person2[0]}님 반가워용!~~~</h3>`);
+        }
+        let person2 = ['김현아', 23];
+        nameIntro(person2[0]);
+
+        function ageIntro(person3) {
+            document.write(`<h3> 안녕하세여 제 이름은 ${person3.name}이고요 ! 나이는 ${person3.age}살입니당`);
+        }
+        ageIntro({name:'김현아', age:23});
+
+
+        function a() {
+            alert('히히');
+            return // 바로 종료되기 때문에 헤헤 alert 실행 안됨
+            alert('헤헤');
+        }
+        function b() {
+            return 3;
+        }
+        
+        // let result = b() // return 값인 3이 반환됨
+        
+        function c(name) {
+            document.write(`<p>${name}님 좋은 아침입니다.</p>`);
+            return name;
+        }
+        let name=c('김현아');
+        console.log(name);
+
+        function d(name) {
+            document.write(`<p>${name}님 좋은 아침입니다.</p>`);
+            return {myname : name};
+        }
+        let user = d('hyeona');
+        console.log(user.myname);
+
+        function getAver(score) {
+            let result = 0;
+            for (let i = 0; i < score.length; i++) {
+                result += Number(score[i]/score.length);
+            }
+            return result;
+        }
+        alert(getAver([30, 50, 30]));
 </script>
 </body>
 </html>
