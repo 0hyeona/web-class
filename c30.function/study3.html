@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메서드 표현</title>
+</head>
+<body>
+    <script>
+        // 사물 -> 객체 
+        let fan = {
+            body:'black',
+            height:120,
+            width:30,
+            weight:6,
+            powerOn:function() {
+                alert('선풍기 전원켜짐')
+                this.fanSpeed=1;
+                return this.fanSpeed;
+            }, // 메서드 
+            powerOff:function() {
+                alert('선풍기 꺼짐')
+                this.fanSpeed=0;
+                return this.fanSpeed;
+            }, // 메서드
+            fanSpeed:0,
+            fanSpeedUp:function() {
+                this.fanSpeed+=1;
+                // return `현재 선풍기가 작동중입니다. 현재 풍속은 ${this.fanSpeed} 입니다.`;
+            }, 
+            fanSpeedDown:function() {
+                this.fanSpeed-=1;
+                //return `현재 선풍기가 작동하지 않습니다. 현재 풍속은 ${this.fanSpeed} 입니다.`;
+            },
+            showFanSpeed:function() {
+                alert(`현재 선풍기 풍속은 ${this.fanSpeed}입니다.`);
+            }
+        };
+
+        let fanColor = 'pink';
+        console.log(fanColor);
+
+        // fan.powerOn()
+        // fan.powerOff()
+        // alert(fan.fanSpeedUp())
+        // alert(fan.fanSpeedDown())
+        fan.showFanSpeed()
+        fan.fanSpeedUp()
+        fan.showFanSpeed()
+        fan.fanSpeedUp()
+        fan.showFanSpeed()
+        fan.fanSpeedUp()
+        fan.showFanSpeed()
+        fan.fanSpeedDown()
+        fan.showFanSpeed()
+        fan.fanSpeedDown()
+        fan.showFanSpeed()
+        fan.fanSpeedDown()
+        fan.showFanSpeed()
+</script>
+</body>
+</html>
