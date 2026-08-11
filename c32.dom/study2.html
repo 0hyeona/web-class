@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 속성 편집하기</title>
+    <style>
+        .b.on {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="./img/hyeona.jpg" alt="hyeona" class="hyeona">
+        <figcaption class="b">김현아</figcaption>
+    </figure>
+    <script>
+        const hyeonaImg = document.querySelector('.hyeona');
+        //alert(hyeonaImg.getAttribute('src'));
+        hyeonaImg.setAttribute('src', './../c03.image-video/img/jeju.jpg');
+        let imgName = document.querySelector('figcaption');
+        // imgName.innerText = '제주';
+        imgName.innerHTML = '<strong>제주</strong>';
+        imgName.classList.add('on');
+        imgName.classList.remove('on');
+    </script>
+    <ul class="list">
+        <li>1</li>
+        <li class="me">2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        let me = document.querySelector('.me');
+        
+        // 부모 클래스 ul
+        me.parentElement.style.border='2px solid green';
+
+        // 다음 형제 태그 선택 
+        me.nextElementSibling.nextElementSibling.style.color = 'blue';
+
+        // 이전 형제 태그 선택
+        me.previousElementSibling.style.color='pink';
+
+        console.log(me.parentElement.previousElementSibling); // script 부분
+
+        let list = document.querySelector('.list');
+        console.log(list); // ul 태그
+
+        // ul 태그의 자식들 li 태그들이 선택됨 : 배열 형태
+        let listTag = list.children;
+        let result = '';
+
+        for (let i = 0; i < listTag.length; i++) {
+            result += listTag[i].textContent;
+        }
+
+        console.log(result); // 1234
+    </script>
+</body>
+</html>
