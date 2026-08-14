@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>관광지 메인</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+
+  <!-- 팝업 만들기 -->
+  <!-- 먼저 배치하고 디자인 한 후 js로 기능 연결하기 -->
+  <div class="popup">
+    <p><span id="popup-count">5</span>초 뒤에 자동으로 팝업이 사라집니다.</p>
+    <figure>
+      <img src="./popup.png" alt="팝업 이미지">
+    </figure>
+    <div class="control">
+      <span>오늘 하루 안 보기</span>
+      <span id="btn-close-popup">닫기</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">여행지 탐방</h1>
+      <nav class="nav">
+        <a href="#">홈</a>
+        <a href="#">추천</a>
+        <a href="#">카테고리</a>
+        <a href="#">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h2>행복한 여행을 시작하세요</h2>
+      <p>지역별 추천 명소와 상세 정보를 한눈에</p>
+      <form class="search" role="search">
+        <input type="search" placeholder="관광지, 도시 또는 키워드 검색">
+        <button type="submit">검색</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="filters container">
+    <button class="filter active">전체</button>
+    <button class="filter">자연</button>
+    <button class="filter">문화</button>
+    <button class="filter">음식</button>
+    <button class="filter">체험</button>
+  </section>
+
+  <main class="container grid" aria-live="polite">
+    <article class="card">
+      <img src="https://via.placeholder.com/600x360?text=명소+1" alt="명소 1">
+      <div class="card-body">
+        <h3>산책하기 좋은 공원</h3>
+        <p class="location">지역명 · 시/군</p>
+        <p class="desc">도심 속 휴식처, 산책로와 전망대가 있는 공원입니다.</p>
+        <a class="btn" href="#">자세히 보기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://via.placeholder.com/600x360?text=명소+2" alt="명소 2">
+      <div class="card-body">
+        <h3>전통 시장 골목</h3>
+        <p class="location">지역명 · 시/군</p>
+        <p class="desc">지역 특산물과 먹거리를 즐길 수 있는 전통 시장입니다.</p>
+        <a class="btn" href="#">자세히 보기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://via.placeholder.com/600x360?text=명소+3" alt="명소 3">
+      <div class="card-body">
+        <h3>역사 문화 유적</h3>
+        <p class="location">지역명 · 시/군</p>
+        <p class="desc">오래된 사적과 박물관이 모여있는 문화 공간입니다.</p>
+        <a class="btn" href="#">자세히 보기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://via.placeholder.com/600x360?text=명소+4" alt="명소 4">
+      <div class="card-body">
+        <h3>해변 전망대</h3>
+        <p class="location">지역명 · 시/군</p>
+        <p class="desc">탁 트인 바다와 석양을 볼 수 있는 인기 포인트입니다.</p>
+        <a class="btn" href="#">자세히 보기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://via.placeholder.com/600x360?text=명소+5" alt="명소 5">
+      <div class="card-body">
+        <h3>체험형 농장</h3>
+        <p class="location">지역명 · 시/군</p>
+        <p class="desc">계절에 따라 수확 체험과 동물 체험을 즐길 수 있습니다.</p>
+        <a class="btn" href="#">자세히 보기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://via.placeholder.com/600x360?text=명소+6" alt="명소 6">
+      <div class="card-body">
+        <h3>야간 조명 거리</h3>
+        <p class="location">지역명 · 시/군</p>
+        <p class="desc">밤에 켜지는 조명과 거리 공연으로 유명한 장소입니다.</p>
+        <a class="btn" href="#">자세히 보기</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 여행지 탐방 · All rights reserved</p>
+    </div>
+  </footer>
+</body>
+</html>
