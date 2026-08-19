@@ -1,0 +1,27 @@
+.tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.tabs div { 
+    border:1px solid #000000;
+    
+    /* 마우스 포인터 */
+    cursor: pointer;
+
+    /* 모양 */
+    padding: 4px 12px;
+
+}
+
+.tabs>div.on { 
+    /* 모양 */
+    background-color: powderblue;
+}
+
+.tab-contents>div {
+    display: none;
+}
+.tab-contents>div.on{
+    display: block;
+}
