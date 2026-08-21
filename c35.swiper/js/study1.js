@@ -49,4 +49,11 @@ const swiper2 = new Swiper('#swip2', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+
+    // 자동 재생
+    autoplay: {
+        delay: 5000,
+    },
+    // 화면에 보여지는 슬라이드 개수
+    slidesPerView: 2
 });
