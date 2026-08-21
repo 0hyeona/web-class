@@ -1,0 +1,19 @@
+/* 슬라이더를 2개 만들 경우에는 .swiper 클래스에 너비/높이를 지정하지 않는게 좋음 */
+.swiper {
+  border: 1px solid red;
+}
+
+#swip1 {
+    width: 700px;
+    height: 350px;
+}
+
+#swip2 {
+    width: 800px;
+    height: 800px;
+}
+
+#swip1 .swiper-slide>img { 
+    width:100%;
+    object-fit: contain;
+}
