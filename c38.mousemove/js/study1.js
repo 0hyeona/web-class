@@ -6,24 +6,49 @@ document.addEventListener('mousemove', (event) => {
     // 커서 display:none/block 한 번만 사용하기 위한 조건문
     if (!CursorState) {
         // 참일 때 block
-        mouseCursor.style.display='block';
+        mouseCursor.style.display = 'block';
         // none으로 변경
-        CursorState=false;
+        CursorState = false;
     }
 
     // 마우스를 움직일 때마다 현재 커서 위치를 출력
     // console.log(event.clientX, event.clientY);
 
-    mouseCursor.style.left=event.clientX + 'px';
-    mouseCursor.style.top=event.clientY + 'px';
+    mouseCursor.style.left = event.clientX + 'px';
+    mouseCursor.style.top = event.clientY + 'px';
 });
 
 // 마우스 버튼을 눌렀을 때 
-document.addEventListener('mousedown', (event)=> {
-    mouseCursor.innerHTML=
-    `<img src="./img/clicked.png" alt="마우스 누른 상태">`;
+document.addEventListener('mousedown', (event) => {
+    mouseCursor.innerHTML =
+        `<img src="./img/clicked.png" alt="마우스 누른 상태">`;
 })
-document.addEventListener('mouseup', (event)=> {
-    mouseCursor.innerHTML=
-    `<img src="./img/default.png" alt="마우스 기본 상태">`;
+document.addEventListener('mouseup', (event) => {
+    mouseCursor.innerHTML =
+        `<img src="./img/default.png" alt="마우스 기본 상태">`;
+})
+
+// 툴팁 박스
+const tooltipBox = document.querySelector('.tooltip-box');
+document.addEventListener('mousemove', (event) => {
+    tooltipBox.style.left = (event.clientX + 120) + 'px';
+    tooltipBox.style.top = event.clientY + 'px';
+})
+const tooltips = document.querySelectorAll('.tooltip');
+tooltips.forEach((spanTag, index) => {
+    spanTag.addEventListener('mouseenter', function () {
+        // 마우스를 올렸을 때 
+        tooltipBox.style.display='block';
+        tooltipBox.innerHTML = spanTag.getAttribute('data-tooltip');
+        mouseCursor.innerHTML =
+            `<img src="./img/clicked.png" alt="마우스 누른 상태">`;
+    })
+    spanTag.addEventListener('mouseleave', function () {
+        // 마우스를 땠을 때
+        tooltipBox.style.display='none';
+        tooltipBox.innerHTML = '';
+        mouseCursor.innerHTML =
+            `<img src="./img/default.png" alt="마우스 기본 상태">`;
+
+    })
 })

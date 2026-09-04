@@ -15,6 +15,21 @@ html {
 
 }
 
+/*  툴팁 박스  */
+.tooltip-box {
+    position: fixed;
+    left:0;
+    top:0;
+    border: 1px solid red;
+    padding: 10px;
+    max-width: 300px;
+    background-color: #fff;
+}
+
+/* 툴팁 클래그 강조 디자인 */
+.tooltip {
+    border-bottom : 2px dashed  brown;
+}
 /* 사용자가 인식할 수 있게끔 UI를 생성 */
 .mouseCursor::after {
     /* before/after 필수 태그 : content */
