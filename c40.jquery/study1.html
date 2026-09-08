@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/study1.css">
+    <script src="./js/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <h1>title</h1>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        // 자바스크립트 사용 시
+        const h1Tag = document.querySelector('h1');
+        h1Tag.style.color='red';
+        h1Tag.style.backgroundColor='gold';
+        const liTag = document.querySelectorAll('.list>li');
+        liTag.forEach((li)=>li.style.fontSize='30px');
+
+        // 제이쿼리 사용 시 
+        const h1 = jQuery('h1');
+        // const h1 = $('h1');
+        h1.css('color', 'blue');
+        h1.css('background-color', 'red');
+        const li = $('.list>li');
+        li.css('font-size', '50px');
+    </script>
+</body>
+</html>
